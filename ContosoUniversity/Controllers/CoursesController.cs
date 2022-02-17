@@ -52,7 +52,7 @@ namespace ContosoUniversity.Controllers
         // GET: Courses/Create
         public IActionResult Create()
         {
-            ViewData["DepartmentID"] = new SelectList(_context.Departments, "DepartmentID", "DepartmentID");
+            PopulateDepartmentsDropDownList();
             return View();
         }
 
