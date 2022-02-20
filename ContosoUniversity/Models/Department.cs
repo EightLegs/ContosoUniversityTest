@@ -22,6 +22,10 @@ namespace ContosoUniversity.Models
         public DateTime StartDate { get; set; }
 
         public int? InstructorID { get; set; }
+        
+        //Атрибут Timestamp указывает, что этот столбец будет включен в предложение Where команд Update и Delete
+        [Timestamp]
+        public byte[] RowVersion { get; set; }
 
         public Instructor Administrator { get; set; }
         public ICollection<Course> Courses { get; set; }
